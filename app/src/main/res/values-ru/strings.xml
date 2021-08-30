@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UzmobileUSSD</string>
+    <string name="uzbek">O\’zbek</string>
+    <string name="russian">Русский</string>
+    <string name="latin">Ўзбек</string>
+    <!-- drawer screen -->
+    <string name="drawer_txt">Национальный оператор</string>
+
+    <string name="telegram_channel">Телеграм канал</string>
+    <string name="connect_with_us">Свяжитесь с нами</string>
+    <string name="share">Поделиться</string>
+    <string name="rate">Оценка</string>
+    <string name="about_us">О нас</string>
+
+    <!-- bottom navigation -->
+    <string name="balance">Баланс</string>
+    <string name="operator">Оператор</string>
+    <string name="news">Новости</string>
+    <string name="settings">Настройки</string>
+
+    <!-- exit -->
+    <string name="ask_exit">Чтобы выйти из программы, нажмите еще раз</string>
+    <string name="error_msg">У вас отсутствует сим карта Uzmobile</string>
+
+
+    <!-- mainCard -->
+    <string name="ussd">USSD коды</string>
+    <string name="tarif">Тарифы</string>
+    <string name="xizmat">Услуги</string>
+    <string name="minute">Минуты</string>
+    <string name="internet">Интернет</string>
+    <string name="sms">СМС</string>
+
+    <!-- labels -->
+    <string name="ussd_label">USSD коды</string>
+    <string name="tarif_label">Тарифы</string>
+    <string name="xizmat_label">Услуги</string>
+    <string name="minute_label">Минуты</string>
+    <string name="internet_label">Интернет пакеты</string>
+    <string name="sms_label">СМС пакеты</string>
+
+    <string name="trafikni_tekshirish">Проверить трафик</string>
+    <string name="sms_tekshirish">Проверить СМС</string>
+    <string name="tarif_tekshirish">Проверить тариф</string>
+    <string name="daqiqa_tekshirish">Проверить минуты</string>
+
+
+    <string name="batafsil">ПОДРОБНЕЕ</string>
+    <string name="tarif_change">ИЗМЕНИТЬ ТАРИФ</string>
+    <string name="permission">В разрешении отказано</string>
+
+</resources>

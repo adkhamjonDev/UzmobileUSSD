@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:label=""
+        android:name="uz.adkhamjon.uzmobileussd.fragments.home.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_USSDFragment"
+            app:destination="@id/USSDFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_minuteFragment"
+            app:destination="@id/minuteFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_internetFragment"
+            app:destination="@id/internetFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_smsFragment"
+            app:destination="@id/smsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tarifFragment"
+            app:destination="@id/tarifFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_xizmatFragment"
+            app:destination="@id/xizmatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="uz.adkhamjon.uzmobileussd.fragments.news.NewsFragment"
+        android:label="@string/news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/USSDFragment"
+        android:name="uz.adkhamjon.uzmobileussd.fragments.ussd.USSDFragment"
+        android:label="@string/ussd_label"
+        tools:layout="@layout/fragment_u_s_s_d" />
+    <fragment
+        android:id="@+id/minuteFragment"
+        android:name="uz.adkhamjon.uzmobileussd.fragments.minute.MinuteFragment"
+        android:label="@string/minute_label"
+        tools:layout="@layout/fragment_minute" />
+    <fragment
+        android:id="@+id/internetFragment"
+        android:name="uz.adkhamjon.uzmobileussd.fragments.internet.InternetFragment"
+        android:label="@string/internet_label"
+        tools:layout="@layout/fragment_internet" />
+    <fragment
+        android:id="@+id/smsFragment"
+        android:name="uz.adkhamjon.uzmobileussd.fragments.sms.SmsFragment"
+        android:label="@string/sms_label"
+        tools:layout="@layout/fragment_sms" />
+    <fragment
+        android:id="@+id/tarifFragment"
+        android:name="uz.adkhamjon.uzmobileussd.fragments.tarif.TarifFragment"
+        android:label="@string/tarif_label"
+        tools:layout="@layout/fragment_tarif" >
+        <action
+            android:id="@+id/action_tarifFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/xizmatFragment"
+        android:name="uz.adkhamjon.uzmobileussd.fragments.xizmat.XizmatFragment"
+        android:label="@string/xizmat_label"
+        tools:layout="@layout/fragment_xizmat" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="uz.adkhamjon.uzmobileussd.fragments.tarif.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+</navigation>
