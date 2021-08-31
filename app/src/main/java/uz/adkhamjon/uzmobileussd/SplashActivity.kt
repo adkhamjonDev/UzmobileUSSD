@@ -3,12 +3,19 @@ package uz.adkhamjon.uzmobileussd
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import uz.adkhamjon.uzmobileussd.fragments.ussd.UssdModel
 import uz.adkhamjon.uzmobileussd.utils.SharedPreference
 
 class SplashActivity : AppCompatActivity() {
+    private lateinit var database: FirebaseDatabase
+    private lateinit var reference: DatabaseReference
+    private lateinit var list:ArrayList<UssdModel>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val background: Thread = object : Thread() {
             override fun run() {
                 try {

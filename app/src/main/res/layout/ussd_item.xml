@@ -29,13 +29,13 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"/>
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"/>
                     <TextView
-                        android:id="@+id/name2"
+                        android:id="@+id/name"
                         android:text="1000"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_16sdp"
+                        android:textSize="@dimen/_12sdp"
                         android:fontFamily="@font/rubik"
                         app:layout_constraintTop_toTopOf="@id/ellipse"
                         app:layout_constraintBottom_toBottomOf="@id/ellipse"
@@ -58,21 +58,11 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                        <TextView
-                            android:id="@+id/name"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:text="50 MB"
-                            android:textSize="@dimen/_16sdp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:textColor="#2E2E2E"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
                         <ImageView
-                            app:layout_constraintBottom_toBottomOf="@id/name"
-                            app:layout_constraintTop_toTopOf="@id/name"
+                            app:layout_constraintBottom_toBottomOf="@id/description"
+                            app:layout_constraintTop_toTopOf="@id/description"
                             app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/description"
                             android:adjustViewBounds="true"
                             android:id="@+id/headerIndicator"
                             android:layout_height="wrap_content"
@@ -81,15 +71,16 @@
                             app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
                         <TextView
                             android:id="@+id/description"
-                            android:textSize="10sp"
+                            android:maxLines="2"
+                            android:textSize="@dimen/_14sdp"
                             android:text="@string/example"
                             android:layout_marginStart="5dp"
-                            android:layout_marginTop="5dp"
-                            app:layout_constraintStart_toStartOf="@id/name"
-                            app:layout_constraintTop_toBottomOf="@id/name"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/headerIndicator"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
@@ -135,7 +126,7 @@
 
                     <TextView
                         android:text="@string/tarif_change"
-                        android:padding="@dimen/_10sdp"
+                        android:padding="@dimen/_9sdp"
                         android:textColor="@color/white"
                         android:fontFamily="@font/rubik"
                         android:layout_width="wrap_content"

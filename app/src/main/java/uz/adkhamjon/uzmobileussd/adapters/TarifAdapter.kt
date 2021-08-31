@@ -5,8 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import uz.adkhamjon.uzmobileussd.databinding.InternetItemBinding
 import uz.adkhamjon.uzmobileussd.databinding.TarifItemBinding
+import uz.adkhamjon.uzmobileussd.fragments.tarif.TarifModel
 
-class TarifAdapter(var list: List<String>,var  onItemClickListener: OnItemClickListener):
+class TarifAdapter(var list: List<TarifModel>,var  onItemClickListener: OnItemClickListener):
     RecyclerView.Adapter<TarifAdapter.MyViewHolder>(){
     inner class MyViewHolder(var tarifItemBinding: TarifItemBinding): RecyclerView.ViewHolder(
         tarifItemBinding.root){
@@ -22,7 +23,7 @@ class TarifAdapter(var list: List<String>,var  onItemClickListener: OnItemClickL
         )
     }
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.tarifItemBinding.name.text=list[position]
+        holder.tarifItemBinding.name.text=list[position].name
         holder.itemView.setOnClickListener {
             onItemClickListener.onItemTarif(position)
         }

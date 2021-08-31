@@ -6,8 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import uz.adkhamjon.uzmobileussd.databinding.InternetItemBinding
 import uz.adkhamjon.uzmobileussd.databinding.TarifItemBinding
 import uz.adkhamjon.uzmobileussd.databinding.UssdItemBinding
+import uz.adkhamjon.uzmobileussd.fragments.ussd.UssdModel
 
-class UssdAdapter(var list: List<String>):
+class UssdAdapter(var list: List<UssdModel>,var onItemClickListener: OnItemClickListener):
     RecyclerView.Adapter<UssdAdapter.MyViewHolder>(){
     inner class MyViewHolder(var ussdItemBinding: UssdItemBinding): RecyclerView.ViewHolder(
         ussdItemBinding.root){
@@ -23,7 +24,11 @@ class UssdAdapter(var list: List<String>):
         )
     }
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.ussdItemBinding.name.text=list[position]
+        holder.ussdItemBinding.name.text=list[position].name
+        holder.ussdItemBinding.description.text=list[position].description
+        holder.ussdItemBinding.run.setOnClickListener {
+            onItemClickListener.onItemRun(list[position].name!!)
+        }
 
 
     }
@@ -31,6 +36,6 @@ class UssdAdapter(var list: List<String>):
         return list.size
     }
     interface OnItemClickListener {
-        fun onItemTarif(position:Int)
+        fun onItemRun(str:String)
     }
 }

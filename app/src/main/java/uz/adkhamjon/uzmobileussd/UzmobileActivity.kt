@@ -39,6 +39,7 @@ class UzmobileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUzmobileBinding
     private lateinit var navController: NavController
     private var backPressedToExitOnce = false
+    private var l=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUzmobileBinding.inflate(layoutInflater)
@@ -100,20 +101,7 @@ class UzmobileActivity : AppCompatActivity() {
                         true
                     }
                     binding.appBarUzmobile.mainScreen.balance.setOnClickListener {
-                        val tManager = baseContext
-                            .getSystemService(AppCompatActivity.TELEPHONY_SERVICE) as TelephonyManager
-                        val carrierName = tManager.networkOperatorName
-                        if(carrierName=="Uzmobile"){
-                            RunUssd.call(
-                                this@UzmobileActivity,
-                                Config.BALANCE,
-                            )
-                        }else{
-                            Toast.makeText(this@UzmobileActivity, R.string.error_msg, Toast.LENGTH_SHORT).show()
-                        }
-
-
-
+                        Config.run(this@UzmobileActivity,"*105#")
                     }
                     binding.appBarUzmobile.mainScreen.operator.setOnClickListener {
 
@@ -170,7 +158,17 @@ class UzmobileActivity : AppCompatActivity() {
          return super.onOptionsItemSelected(item)
     }
     private fun setLanguage() {
-        val locale = Locale(SharedPreference.getInstance(this).lang)
+        val lang = SharedPreference.getInstance(this).lang
+        if(lang=="uzbek"){
+            l="en"
+        }
+        else if(lang=="russian"){
+            l="ru"
+        }
+        else{
+            l="uz"
+        }
+        val locale = Locale(l)
         Locale.setDefault(locale)
         val config = resources.configuration
         config.locale = locale

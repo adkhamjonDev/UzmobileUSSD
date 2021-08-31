@@ -16,7 +16,7 @@ class LanguageActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.uzbek.setOnClickListener {
-            SharedPreference.getInstance(this).lang = "en"
+            SharedPreference.getInstance(this).lang = "uzbek"
             SharedPreference.getInstance(this).setHasLang(true)
             val intent = Intent(this, UzmobileActivity::class.java)
             startActivity(intent)
@@ -25,7 +25,7 @@ class LanguageActivity : AppCompatActivity() {
 
         }
         binding.russian.setOnClickListener {
-            SharedPreference.getInstance(this).lang = "ru"
+            SharedPreference.getInstance(this).lang = "russian"
             SharedPreference.getInstance(this).setHasLang(true)
             val intent = Intent(this, UzmobileActivity::class.java)
             startActivity(intent)
@@ -34,7 +34,7 @@ class LanguageActivity : AppCompatActivity() {
 
         }
         binding.latin.setOnClickListener {
-            SharedPreference.getInstance(this).lang = "uz"
+            SharedPreference.getInstance(this).lang = "latin"
             SharedPreference.getInstance(this).setHasLang(true)
             val intent = Intent(this, UzmobileActivity::class.java)
             startActivity(intent)

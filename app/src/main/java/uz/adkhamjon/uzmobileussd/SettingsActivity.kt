@@ -17,18 +17,18 @@ class SettingsActivity : AppCompatActivity() {
             finish()
         }
         binding.uzbek.setOnClickListener {
-            SharedPreference.getInstance(this).lang = "en"
+            SharedPreference.getInstance(this).lang = "uzbek"
             startActivity(Intent(this@SettingsActivity, UzmobileActivity::class.java))
             finish()
         }
         binding.russian.setOnClickListener {
-            SharedPreference.getInstance(this).lang = "ru"
+            SharedPreference.getInstance(this).lang = "russian"
             startActivity(Intent(this@SettingsActivity, UzmobileActivity::class.java))
             finish()
 
         }
         binding.latin.setOnClickListener {
-            SharedPreference.getInstance(this).lang = "uz"
+            SharedPreference.getInstance(this).lang = "latin"
             startActivity(Intent(this@SettingsActivity, UzmobileActivity::class.java))
             finish()
         }
