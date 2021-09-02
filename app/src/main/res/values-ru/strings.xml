@@ -55,5 +55,11 @@
     <string name="sale_tab">Акции</string>
     <string name="back">НАЗАД</string>
     <string name="call">ПОЗВОНИТЬ</string>
+    <string name="biz_blan_aloqa">Свяжитесь с нами</string>
+    <string name="send_email">ОТПРАВИТЬ ПИСЬМО</string>
+    <string name="about_txt">Это приложение было разработано в процессе упрощения предложений оператора Uzmobile.
+          наша учетная запись никогда не будет иметь никакого отношения к вашему листу и номеру.
+          Вопросы и предложения можно отправлять через @ussdchat Telegram.</string>
+
 
 </resources>

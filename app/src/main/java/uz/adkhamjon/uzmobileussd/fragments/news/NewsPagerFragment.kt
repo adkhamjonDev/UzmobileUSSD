@@ -83,7 +83,7 @@ class NewsPagerFragment : Fragment() {
                 builder.setPositiveButton(R.string.batafsil,
                     DialogInterface.OnClickListener { dialog, id ->
                         val str=SharedPreference.getInstance(requireContext()).lang
-                        val url = "https://uztelecom.uz/${str.subSequence(0,2)}"
+                        val url = "https://uztelecom.uz"
                         val i = Intent(Intent.ACTION_VIEW)
                         i.data = Uri.parse(url)
                         startActivity(i)

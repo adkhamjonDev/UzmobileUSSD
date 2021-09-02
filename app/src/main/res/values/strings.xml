@@ -63,6 +63,9 @@ imkoniyat UZTELECOM savdo idorasiga yozma ariza bilan belgilanadi.</string>
     <string name="sale_tab">Aksiyalar</string>
     <string name="back">ORQAGA</string>
     <string name="call">Qo\'ng\'iroq qlish</string>
+    <string name="biz_blan_aloqa">Biz blan aloqa</string>
+    <string name="send_email">XAT JO\'NATISH</string>
+    <string name="about_txt">Mazkur ilova Uzmobile operatori mijozlariga qulaylik yaratish maqsadida ishlab chiqilgan bo\'lib, sizning shaxsiy hisob varaqangizga va raqamingizga hech qanday zararli tomoni yo\'q. Savol va takliflar bo\'lsa @ussdchat Telegram orqali yozishingiz mumkin.</string>
 
 
 </resources>

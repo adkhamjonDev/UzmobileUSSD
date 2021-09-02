@@ -1,8 +1,11 @@
 package uz.adkhamjon.uzmobileussd
 
 import android.Manifest
+import android.app.AlertDialog
 import android.content.ActivityNotFoundException
+import android.content.DialogInterface
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
@@ -12,6 +15,8 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -28,9 +33,10 @@ import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import uz.adkhamjon.uzmobileussd.databinding.ActivityUzmobileBinding
 import uz.adkhamjon.uzmobileussd.utils.Config
-import uz.adkhamjon.uzmobileussd.utils.RunUssd
 import uz.adkhamjon.uzmobileussd.utils.SharedPreference
 import java.util.*
+
+
 
 
 class UzmobileActivity : AppCompatActivity() {
@@ -64,8 +70,15 @@ class UzmobileActivity : AppCompatActivity() {
                     binding.navView.setNavigationItemSelectedListener {
                         when (it.itemId) {
                             R.id.telegram -> {
-
-
+                                val uri =
+                                    Uri.parse("https://t.me/ussduz")
+                                val intent = Intent(Intent.ACTION_VIEW, uri)
+                                try {
+                                    startActivity(intent)
+                                } catch (e: Exception) {
+                                    binding.drawerLayout.close()
+                                }
+                                binding.drawerLayout.close()
                             }
                             R.id.share -> {
                                 ShareCompat.IntentBuilder.from(this@UzmobileActivity)
@@ -90,10 +103,40 @@ class UzmobileActivity : AppCompatActivity() {
                                 }
                             }
                             R.id.call -> {
+                                val dialog = AlertDialog.Builder(this@UzmobileActivity)
+                                dialog.setTitle(R.string.biz_blan_aloqa)
+                                dialog.setMessage("Email: ussdmobile@gamil.com")
+                                dialog.setPositiveButton(R.string.send_email,
+                                    DialogInterface.OnClickListener { dialog, id ->
+                                        val intent = Intent(Intent.ACTION_SENDTO)
+                                        intent.data =
+                                            Uri.parse("mailto:") // only email apps should handle this
 
+                                        intent.putExtra(Intent.EXTRA_EMAIL, "ussdmobile@gamil.com")
+                                        intent.putExtra(Intent.EXTRA_SUBJECT, "subject")
+                                        if (intent.resolveActivity(packageManager) != null) startActivity(intent)
+
+
+                                    })
+                                dialog.setNegativeButton(R.string.back,
+                                    DialogInterface.OnClickListener { dialog, id ->
+
+                                    })
+                                val alertDialog = dialog.create()
+                                alertDialog.show()
                             }
                             R.id.about -> {
+                                val dialog = AlertDialog.Builder(this@UzmobileActivity)
+                                dialog.setTitle(R.string.about_us)
+                                dialog.setMessage(R.string.about_txt)
+                                dialog.setPositiveButton(R.string.back,
+                                    DialogInterface.OnClickListener { dialog, id ->
 
+
+
+                                    })
+                                val alertDialog = dialog.create()
+                                alertDialog.show()
 
                             }
                         }
@@ -149,10 +192,25 @@ class UzmobileActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.telegram->{
-
+                val uri =
+                    Uri.parse("https://t.me/ussduz")
+                val intent = Intent(Intent.ACTION_VIEW, uri)
+                try {
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    binding.drawerLayout.close()
+                }
+                binding.drawerLayout.close()
             }
             R.id.share->{
-
+                val sendIntent = Intent()
+                sendIntent.action = Intent.ACTION_SEND
+                sendIntent.putExtra(
+                    Intent.EXTRA_TEXT,
+                    "http://play.google.com/store/apps/details?id=uz.pdp.uzmobile"
+                )
+                sendIntent.type = "text/plain"
+                startActivity(sendIntent)
             }
         }
          return super.onOptionsItemSelected(item)

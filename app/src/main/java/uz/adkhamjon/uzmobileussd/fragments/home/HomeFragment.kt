@@ -1,16 +1,19 @@
 package uz.adkhamjon.uzmobileussd.fragments.home
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.zhuinden.fragmentviewbindingdelegatekt.viewBinding
 import uz.adkhamjon.uzmobileussd.R
-import uz.adkhamjon.uzmobileussd.databinding.FragmentHomeBinding
 import uz.adkhamjon.uzmobileussd.adapters.BannerPagerAdapter
+import uz.adkhamjon.uzmobileussd.databinding.FragmentHomeBinding
+import uz.adkhamjon.uzmobileussd.utils.SharedPreference
 
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -79,6 +82,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
             sms.setOnClickListener {
                 findNavController().navigate(R.id.action_homeFragment_to_smsFragment)
+            }
+            logo.setOnClickListener {
+                val url = "https://uztelecom.uz/${SharedPreference.getInstance(requireContext()).lang.subSequence(0,2)}"
+                val i = Intent(Intent.ACTION_VIEW)
+                i.data = Uri.parse(url)
+                startActivity(i)
             }
 
         }
