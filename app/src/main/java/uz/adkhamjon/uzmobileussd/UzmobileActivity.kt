@@ -1,6 +1,7 @@
 package uz.adkhamjon.uzmobileussd
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.DialogInterface
@@ -12,6 +13,7 @@ import android.os.Handler
 import android.telephony.TelephonyManager
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
@@ -35,6 +37,12 @@ import uz.adkhamjon.uzmobileussd.databinding.ActivityUzmobileBinding
 import uz.adkhamjon.uzmobileussd.utils.Config
 import uz.adkhamjon.uzmobileussd.utils.SharedPreference
 import java.util.*
+import io.reactivex.android.schedulers.AndroidSchedulers
+
+import io.reactivex.schedulers.Schedulers
+
+import com.github.pwittchen.reactivenetwork.library.rx2.ReactiveNetwork
+
 
 
 
@@ -46,6 +54,7 @@ class UzmobileActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private var backPressedToExitOnce = false
     private var l=""
+    @SuppressLint("CheckResult")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUzmobileBinding.inflate(layoutInflater)
@@ -179,10 +188,6 @@ class UzmobileActivity : AppCompatActivity() {
                 }
             }).check()
 
-
-
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -262,6 +267,13 @@ class UzmobileActivity : AppCompatActivity() {
         super.onRestart()
         recreate()
         setLanguage()
+    }
+    fun hideProgress() {
+
+    }
+
+    fun showProgress() {
+
     }
 }
 

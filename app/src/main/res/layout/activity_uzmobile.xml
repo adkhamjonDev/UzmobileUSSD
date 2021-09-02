@@ -7,13 +7,11 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
-
-    <include
-        android:id="@+id/app_bar_uzmobile"
-        layout="@layout/app_bar_uzmobile"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        <include
+            android:id="@+id/app_bar_uzmobile"
+            layout="@layout/app_bar_uzmobile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     <com.google.android.material.navigation.NavigationView
         app:itemTextColor="@color/splash_text_color"
         app:itemIconTint="@color/splash_text_color"
