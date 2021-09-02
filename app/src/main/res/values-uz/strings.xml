@@ -52,5 +52,8 @@
 
     <string name="permission">Рухсат рад этилди</string>
 
+    <string name="news_tab">Йангиликлар</string>
+    <string name="sale_tab">Аксиялар</string>
+
 
 </resources>

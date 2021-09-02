@@ -50,4 +50,7 @@
     <string name="tarif_change">TARIF O\'ZGARTIRISH</string>
     <string name="permission">Ruxsat rad etildi</string>
 
+    <string name="news_tab">Yangiliklar</string>
+    <string name="sale_tab">Aksiyalar</string>
+
 </resources>

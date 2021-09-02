@@ -48,7 +48,6 @@
     <string name="daqiqa_tekshirish">Daqiqa ni tekshirish</string>
 
 
-
     <string name="batafsil">BATAFSIL</string>
     <string name="tarif_change">TARIF O\'ZGARTIRISH</string>
 
@@ -59,6 +58,10 @@
     <string name="example" translatable="false">Agar abonentda ADSL texnologiyasidan foydalangan holda IPTV xizmati
 mavjud bo\'lsa, tarif rejasida ko\'rsatilgan tezlikni ta\'minlash uchun texnik
 imkoniyat UZTELECOM savdo idorasiga yozma ariza bilan belgilanadi.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="news_tab">Yangiliklar</string>
+    <string name="sale_tab">Aksiyalar</string>
 
 
 </resources>

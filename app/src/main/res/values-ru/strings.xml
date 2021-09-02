@@ -51,4 +51,7 @@
     <string name="tarif_change">ИЗМЕНИТЬ ТАРИФ</string>
     <string name="permission">В разрешении отказано</string>
 
+    <string name="news_tab">Новости</string>
+    <string name="sale_tab">Акции</string>
+
 </resources>
