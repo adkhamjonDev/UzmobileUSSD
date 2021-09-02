@@ -53,5 +53,7 @@
 
     <string name="news_tab">Новости</string>
     <string name="sale_tab">Акции</string>
+    <string name="back">НАЗАД</string>
+    <string name="call">ПОЗВОНИТЬ</string>
 
 </resources>

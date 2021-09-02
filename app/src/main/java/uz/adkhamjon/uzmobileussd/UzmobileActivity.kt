@@ -105,7 +105,7 @@ class UzmobileActivity : AppCompatActivity() {
                     }
                     binding.appBarUzmobile.mainScreen.operator.setOnClickListener {
 
-                        Toast.makeText(this@UzmobileActivity, "operator", Toast.LENGTH_SHORT).show()
+                        navController.navigate(R.id.operatorFragment)
 
                     }
                     binding.appBarUzmobile.mainScreen.home.setOnClickListener {

@@ -52,5 +52,7 @@
 
     <string name="news_tab">Yangiliklar</string>
     <string name="sale_tab">Aksiyalar</string>
+    <string name="back">ORQAGA</string>
+    <string name="call">Qo\'ng\'iroq qlish</string>
 
 </resources>

@@ -54,6 +54,8 @@
 
     <string name="news_tab">Йангиликлар</string>
     <string name="sale_tab">Аксиялар</string>
+    <string name="back">ОРКАГА</string>
+    <string name="call">Кунгирок клиш</string>
 
 
 </resources>

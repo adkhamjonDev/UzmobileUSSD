@@ -72,4 +72,14 @@
         android:name="uz.adkhamjon.uzmobileussd.fragments.tarif.InfoFragment"
         android:label="fragment_info"
         tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/newsPagerFragment"
+        android:name="uz.adkhamjon.uzmobileussd.fragments.news.NewsPagerFragment"
+        android:label="fragment_news_pager"
+        tools:layout="@layout/fragment_news_pager" />
+    <fragment
+        android:id="@+id/operatorFragment"
+        android:name="uz.adkhamjon.uzmobileussd.fragments.operator.OperatorFragment"
+        android:label="@string/operator"
+        tools:layout="@layout/fragment_operator" />
 </navigation>
