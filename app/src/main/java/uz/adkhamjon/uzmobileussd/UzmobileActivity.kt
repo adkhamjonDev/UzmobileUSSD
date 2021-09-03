@@ -172,6 +172,9 @@ class UzmobileActivity : AppCompatActivity() {
 
     }
 
+    fun setTittle(str:String){
+        binding.appBarUzmobile.toolbar.title = str
+    }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.info_menu, menu)
         return true

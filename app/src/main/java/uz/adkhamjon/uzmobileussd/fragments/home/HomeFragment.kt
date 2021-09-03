@@ -29,11 +29,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         handler=Handler(Looper.getMainLooper())
         list= ArrayList()
-        list.add(1)
-        list.add(2)
-        list.add(3)
-        list.add(4)
-        list.add(5)
+        list.add(R.drawable.banner1)
+        list.add(R.drawable.banner2)
+        list.add(R.drawable.banner3)
+        list.add(R.drawable.banner4)
+        list.add(R.drawable.banner5)
         bannerPagerAdapter= BannerPagerAdapter(requireContext(),list)
         binding.apply {
             banner.adapter=bannerPagerAdapter

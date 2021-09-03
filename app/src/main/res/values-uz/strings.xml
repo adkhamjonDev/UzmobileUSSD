@@ -63,6 +63,13 @@
     <string name="internetlar">"Интернет: "</string>
     <string name="smslar">"Sms: "</string>
     <string name="so_m_oy">сум/ой</string>
+    <string name="so_m">сум</string>
     <string name="change">Тариф узгартириш: </string>
     <string name="payment">Абонент тулови </string>
+
+    <string name="uzb">Узбекситон буйича </string>
+    <string name="daqiqa">дақиқа </string>
+    <string name="network">Тармоқ ичида </string>
+    <string name="mob_internet">Мобил интернет </string>
+    <string name="sms_uzb">Узбекситон буйича </string>
 </resources>

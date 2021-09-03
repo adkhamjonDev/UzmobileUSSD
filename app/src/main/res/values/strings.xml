@@ -70,8 +70,15 @@ imkoniyat UZTELECOM savdo idorasiga yozma ariza bilan belgilanadi.</string>
     <string name="internetlar">"Internet: "</string>
     <string name="smslar">"Sms: "</string>
     <string name="so_m_oy">so\'m/oy</string>
+    <string name="so_m">so\'m</string>
     <string name="change">Tarif o\'zgartirish: </string>
     <string name="payment">Abonent to\'lovi </string>
+
+    <string name="uzb">O\'zbekiston bo\'yicha</string>
+    <string name="daqiqa">daqiqa</string>
+    <string name="network">Tarmoq ichida</string>
+    <string name="mob_internet">Mobil internet</string>
+    <string name="sms_uzb">O\'zbekiston bo\'yicha</string>
 
 
 </resources>

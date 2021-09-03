@@ -64,7 +64,15 @@
     <string name="internetlar">"Интернет: "</string>
     <string name="smslar">"СМС: "</string>
     <string name="so_m_oy">сум/месяц</string>
+    <string name="so_m">сум</string>
     <string name="change">Изменить тариф: </string>
     <string name="payment">Абонентская плата </string>
+
+
+    <string name="uzb">Исходящие по Узбекистану </string>
+    <string name="daqiqa">минут</string>
+    <string name="network">Исходящие внутри сети</string>
+    <string name="mob_internet">Мобильный интернет</string>
+    <string name="sms_uzb">CМС по Узбекистану</string>
 
 </resources>

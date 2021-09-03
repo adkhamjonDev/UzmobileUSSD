@@ -236,8 +236,6 @@
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
-
-
                         <TextView
                             android:id="@+id/change"
                             android:layout_marginLeft="10dp"
@@ -245,6 +243,7 @@
                             android:text="Abonent to\'lovi oyiga 49900 so\'m"
                             android:textColor="@color/black"
                             android:layout_marginTop="50dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/sms"
                             app:layout_constraintStart_toStartOf="parent"
                             android:layout_width="wrap_content"

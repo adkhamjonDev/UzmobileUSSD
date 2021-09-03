@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.zhuinden.fragmentviewbindingdelegatekt.viewBinding
 import uz.adkhamjon.uzmobileussd.R
+import uz.adkhamjon.uzmobileussd.UzmobileActivity
 import uz.adkhamjon.uzmobileussd.databinding.FragmentInfoBinding
 import uz.adkhamjon.uzmobileussd.utils.Config
 
@@ -22,10 +23,10 @@ class InfoFragment : Fragment(R.layout.fragment_info) {
   @SuppressLint("SetTextI18n")
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-
     if(arguments!=null){
       tarifModel=arguments?.get("object")as TarifModel
     }
+    (activity as UzmobileActivity?)?.setTittle("\"${tarifModel.name}\"")
     binding.apply {
 
       more.setOnClickListener {
@@ -38,16 +39,21 @@ class InfoFragment : Fragment(R.layout.fragment_info) {
         tarifModel.code?.let { it1 -> Config.run(requireContext(), it1) }
       }
 
-      name.text=tarifModel.name
+      name.text="\"${tarifModel.name}\""
       name2.text=tarifModel.name
       payment.text=tarifModel.payment
       bannerInternet.text=tarifModel.internetLimit
       bannerSms.text=tarifModel.smsLimit
-      bannerMinute.text=tarifModel.minuteLimitNetwork?.subSequence(0,5)
+      bannerMinute.text="${tarifModel.minuteLimitMonth} M"
 
-      payment2.text="${requireContext().getString(R.string.payment)}"
+      payment2.text="${requireContext().getString(R.string.payment)} ${tarifModel.payment} ${requireContext().getString(R.string.so_m)}"
+      minute.text="${requireContext().getString(R.string.uzb)} ${tarifModel.minuteLimitMonth} ${requireContext().getString(R.string.daqiqa)}"
+      minuteNetwork.text="${requireContext().getString(R.string.network)} ${tarifModel.minuteLimitNetwork} ${requireContext().getString(R.string.daqiqa)}"
+      internet.text="${requireContext().getString(R.string.mob_internet)} ${tarifModel.internetLimit}"
+      sms.text="${requireContext().getString(R.string.sms_uzb)} ${tarifModel.smsLimit}"
 
-      change.text="${requireActivity().getText(R.string.change)}${tarifModel.code}"
+
+      change.text="${requireActivity().getText(R.string.change)} ${tarifModel.code}"
 
     }
   }

@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 import uz.adkhamjon.uzmobileussd.R
@@ -22,11 +23,8 @@ class  BannerPagerAdapter(val context: Context, private val list: List<Int>): Pa
         layoutInflater= LayoutInflater.from(context)
         val view=layoutInflater.inflate(R.layout.view_pager_item,container,false)
 
-        val text:TextView = view.findViewById(R.id.txt)
-        text.text=list[position].toString()
-
-
-
+        val imageView:ImageView = view.findViewById(R.id.image)
+        imageView.setImageResource(list[position])
         container.addView(view,0)
         return view
     }
