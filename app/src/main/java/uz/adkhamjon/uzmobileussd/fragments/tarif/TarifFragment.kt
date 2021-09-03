@@ -31,6 +31,12 @@ class TarifFragment : Fragment(R.layout.fragment_tarif) {
 
         list= ArrayList()
 
+
+
+
+
+
+
         tarifAdapter= TarifAdapter(list,object :TarifAdapter.OnItemClickListener{
             override fun onItemTarif(position: Int) {
 

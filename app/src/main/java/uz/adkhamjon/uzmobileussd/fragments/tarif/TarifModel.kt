@@ -1,47 +1,30 @@
 package uz.adkhamjon.uzmobileussd.fragments.tarif
 
 class TarifModel {
-    var imageUrl:String?=null
-    var name:String?=null
-    var monthlyPayment:Int?=null
-    var Minute:Int?=null
-    var networkMinute:Int?=null
-    var internet:Int?=null
-    var Sms:Int?=null
-    var oneMinute:Int?=null
-    var oneMb:Int?=null
-    var oneSms:Int?=null
-    var code:String?=null
-    var mode:String?=null
+   var name:String?=null
+    var imgUrl:String?=null
+    var payment:String?=null
+    var minuteLimitMonth:String?=null
+    var minuteLimitNetwork:String?=null
+    var internetLimit:String?=null
+    var smsLimit:String?=null
 
-    constructor()
-        constructor(
-        imageUrl: String?,
+    constructor(
         name: String?,
-        monthlyPayment: Int?,
-        Minute: Int?,
-        networkMinute: Int?,
-        internet: Int?,
-        Sms: Int?,
-        oneMinute: Int?,
-        oneMb: Int?,
-        oneSms: Int?,
-        code: String?,
-        mode: String?
+        imgUrl: String,
+        payment: String?,
+        minuteLimitMonth: String?,
+        minuteLimitNetwork: String?,
+        internetLimit: String?,
+        smsLimit: String?
     ) {
-        this.imageUrl = imageUrl
         this.name = name
-        this.monthlyPayment = monthlyPayment
-        this.Minute = Minute
-        this.networkMinute = networkMinute
-        this.internet = internet
-        this.Sms = Sms
-        this.oneMinute = oneMinute
-        this.oneMb = oneMb
-        this.oneSms = oneSms
-        this.code = code
-        this.mode = mode
+        this.imgUrl = imgUrl
+        this.payment = payment
+        this.minuteLimitMonth = minuteLimitMonth
+        this.minuteLimitNetwork = minuteLimitNetwork
+        this.internetLimit = internetLimit
+        this.smsLimit = smsLimit
     }
-
-
+    constructor()
 }
