@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:background="@color/card_background_color"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="?actionBarSize">
     <LinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="match_parent"

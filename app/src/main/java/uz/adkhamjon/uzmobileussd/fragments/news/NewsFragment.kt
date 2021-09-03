@@ -1,12 +1,9 @@
 package uz.adkhamjon.uzmobileussd.fragments.news
 
-import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -16,7 +13,6 @@ import com.zhuinden.fragmentviewbindingdelegatekt.viewBinding
 import uz.adkhamjon.uzmobileussd.R
 import uz.adkhamjon.uzmobileussd.databinding.DefaultItemBinding
 import uz.adkhamjon.uzmobileussd.databinding.FragmentNewsBinding
-import uz.adkhamjon.uzmobileussd.fragments.ussd.UssdModel
 import uz.adkhamjon.uzmobileussd.utils.SharedPreference
 
 class NewsFragment : Fragment(R.layout.fragment_news) {
@@ -29,7 +25,7 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
 
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var reference: DatabaseReference
-    private lateinit var myPagerAdapter:MyPagerAdapter
+    private lateinit var newsPagerAdapter:NewsPagerAdapter
 
 
 
@@ -48,11 +44,11 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
         categoryList1=ArrayList()
         categoryList1.add("Yangiliklar")
         categoryList1.add("Aksiyalar")
-        myPagerAdapter= MyPagerAdapter(categoryList1, childFragmentManager)
+        newsPagerAdapter= NewsPagerAdapter(categoryList1, childFragmentManager)
 
 
         binding.apply {
-            binding.viewPager.adapter=myPagerAdapter
+            binding.viewPager.adapter=newsPagerAdapter
             binding.tabLayout.setupWithViewPager(binding.viewPager)
             setTabs()
             tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {

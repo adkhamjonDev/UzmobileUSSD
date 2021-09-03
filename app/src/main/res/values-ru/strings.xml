@@ -74,5 +74,6 @@
     <string name="network">Исходящие внутри сети</string>
     <string name="mob_internet">Мобильный интернет</string>
     <string name="sms_uzb">CМС по Узбекистану</string>
+    <string name="activlashtirish">АКТИВИРОВАТЬ</string>
 
 </resources>
