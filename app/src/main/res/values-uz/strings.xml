@@ -59,5 +59,10 @@
     <string name="biz_blan_aloqa">Биз блан алока</string>
     <string name="send_email">XAT ЖУНАТИШ</string>
     <string name="about_txt">Мазкур илова Узмобиле оператори мижозларига қулайлик яратиш мақсадида ишлаб чиқилган бўлиб, сизнинг шахсий ҳисоб варақангизга ва рақамингизга ҳеч қандай зарарли томони йўқ.Савол ва таклифлар бўлса @уссдчат Телеграм орқали ёзишингиз мумкин.</string>
-
+    <string name="daqiqalar">"Дақиқа: "</string>
+    <string name="internetlar">"Интернет: "</string>
+    <string name="smslar">"Sms: "</string>
+    <string name="so_m_oy">сум/ой</string>
+    <string name="change">Тариф узгартириш: </string>
+    <string name="payment">Абонент тулови </string>
 </resources>

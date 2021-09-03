@@ -57,6 +57,11 @@
     <string name="biz_blan_aloqa">Biz blan aloqa</string>
     <string name="send_email">XAT JO\'NATISH</string>
     <string name="about_txt">Mazkur ilova Uzmobile operatori mijozlariga qulaylik yaratish maqsadida ishlab chiqilgan bo\'lib, sizning shaxsiy hisob varaqangizga va raqamingizga hech qanday zararli tomoni yo\'q. Savol va takliflar bo\'lsa @ussdchat Telegram orqali yozishingiz mumkin.</string>
-
+    <string name="daqiqalar">"Daqiqa: "</string>
+    <string name="internetlar">"Internet: "</string>
+    <string name="smslar">"Sms: "</string>
+    <string name="so_m_oy">so\'m/oy</string>
+    <string name="change">Tarif o\'zgartirish: </string>
+    <string name="payment">Abonent to\'lovi </string>
 
 </resources>

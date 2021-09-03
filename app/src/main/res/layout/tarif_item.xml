@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackgroundBorderless"
@@ -7,61 +7,40 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:layout_height="@dimen/_80sdp">
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/rate"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/recommended"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="20dp"
+        android:layout_height="30dp"/>
     <LinearLayout
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/ellipse"
-                android:layout_margin="10dp"
-                android:src="@drawable/unnamed"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_width="0dp"
-                android:layout_height="0dp"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:orientation="horizontal">
         <LinearLayout
-            android:background="@drawable/border_top"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="3">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:text="Oddiy 10"
-                    android:textSize="@dimen/_16sdp"
-                    app:layout_constraintStart_toStartOf="parent"
+                <ImageView
+                    android:id="@+id/ellipse"
+                    android:layout_margin="13dp"
+                    android:src="@drawable/unnamed"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:textColor="#2E2E2E"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/description"
-                    android:textSize="10sp"
-                    android:text="@string/example"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="5dp"
-                    app:layout_constraintStart_toStartOf="@id/name"
-                    app:layout_constraintTop_toBottomOf="@id/name"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="0dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -69,9 +48,72 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="20">
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <LinearLayout
+                android:background="@drawable/border_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="Oddiy 10"
+                        android:textSize="@dimen/_16sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#2E2E2E"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/minute"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="@string/app_name"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="3dp"
+                        app:layout_constraintStart_toStartOf="@id/name"
+                        app:layout_constraintTop_toBottomOf="@id/name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"/>
+                    <TextView
+                        android:id="@+id/internet"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="@string/app_name"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintStart_toStartOf="@id/minute"
+                        app:layout_constraintTop_toBottomOf="@id/minute"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"/>
+                    <TextView
+                        android:id="@+id/sms"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="@string/app_name"
+                        android:paddingBottom="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintStart_toStartOf="@id/internet"
+                        app:layout_constraintTop_toBottomOf="@id/internet"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="20">
+
+            </LinearLayout>
 
         </LinearLayout>
-
     </LinearLayout>
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

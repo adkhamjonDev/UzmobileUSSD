@@ -60,6 +60,11 @@
     <string name="about_txt">Это приложение было разработано в процессе упрощения предложений оператора Uzmobile.
           наша учетная запись никогда не будет иметь никакого отношения к вашему листу и номеру.
           Вопросы и предложения можно отправлять через @ussdchat Telegram.</string>
-
+    <string name="daqiqalar">"Минуты: "</string>
+    <string name="internetlar">"Интернет: "</string>
+    <string name="smslar">"СМС: "</string>
+    <string name="so_m_oy">сум/месяц</string>
+    <string name="change">Изменить тариф: </string>
+    <string name="payment">Абонентская плата </string>
 
 </resources>
