@@ -3,9 +3,7 @@ package uz.adkhamjon.uzmobileussd.fragments.sms
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -14,10 +12,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.zhuinden.fragmentviewbindingdelegatekt.viewBinding
 import uz.adkhamjon.uzmobileussd.R
-import uz.adkhamjon.uzmobileussd.adapters.MinuteAdapter
-import uz.adkhamjon.uzmobileussd.adapters.SmsAdapter
 import uz.adkhamjon.uzmobileussd.databinding.DefaultItemBinding
-import uz.adkhamjon.uzmobileussd.databinding.FragmentMinuteBinding
 import uz.adkhamjon.uzmobileussd.databinding.FragmentSmsBinding
 import uz.adkhamjon.uzmobileussd.utils.Config
 import uz.adkhamjon.uzmobileussd.utils.SharedPreference
@@ -35,6 +30,7 @@ class SmsFragment : Fragment(R.layout.fragment_sms) {
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var reference: DatabaseReference
     private lateinit var smsPagerAdapter: SmsPagerAdapter
+    private lateinit var hashMap: HashMap<String,ArrayList<SmsModel>>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -63,6 +59,8 @@ class SmsFragment : Fragment(R.layout.fragment_sms) {
             categoryList.add("CМеждународные СМС пакеты")
             categoryList.add("DСМС пакеты для абонентов ТП \"Constructor\"")
         }
+
+
         smsPagerAdapter= SmsPagerAdapter(categoryList,childFragmentManager)
         binding.apply {
             binding.viewPager.adapter=smsPagerAdapter
@@ -96,9 +94,8 @@ class SmsFragment : Fragment(R.layout.fragment_sms) {
         val count: Int = binding.tabLayout.tabCount
         for (i in 0 until count) {
             bind = DefaultItemBinding.inflate(layoutInflater, null, false)
-            var s = categoryList[i]
-            s=s.substring(1)
-            bind.tittleItem.text = s
+            val s = categoryList[i]
+            bind.tittleItem.text = s.substring(1)
             if (i == 0) {
                 bind.linearLayout.background = ContextCompat.getDrawable(requireContext(),R.drawable.default_tab2)
                 bind.tittleItem.setTextColor(Color.parseColor("#01B4FF"))

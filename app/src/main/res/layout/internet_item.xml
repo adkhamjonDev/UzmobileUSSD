@@ -42,6 +42,7 @@
         android:orientation="horizontal"
         android:layout_weight="1">
         <LinearLayout
+            android:background="@drawable/border_bottom"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -59,18 +60,10 @@
                     android:textColor="#2E2E2E"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-                <ImageView
-                    android:id="@+id/vector"
-                    app:layout_constraintTop_toTopOf="@id/name"
-                    app:layout_constraintBottom_toBottomOf="@id/name"
-                    android:src="@drawable/ic_vector__1_"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
                 <TextView
-                    android:id="@+id/description"
-                    android:textSize="10sp"
-                    android:text="@string/example"
+                    android:id="@+id/cost"
+                    android:textSize="@dimen/_9sdp"
+                    android:text="Narhi 420 so\'m"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="5dp"
                     app:layout_constraintStart_toStartOf="@id/name"
@@ -78,16 +71,28 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"/>
-                <View
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/view"
-                    android:background="@color/black"
-                    app:layout_constraintTop_toBottomOf="@id/description"
-                    app:layout_constraintStart_toStartOf="parent"
+                <TextView
+                    android:id="@+id/number"
+                    android:textSize="@dimen/_9sdp"
+                    android:text="Narhi 420 so\'m"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toStartOf="@id/cost"
+                    app:layout_constraintTop_toBottomOf="@id/cost"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_width="match_parent"
-                    android:layout_height="0.5dp"/>
+                    android:layout_height="0dp"/>
+                <TextView
+                    android:paddingBottom="5dp"
+                    android:id="@+id/deadline"
+                    android:textSize="@dimen/_9sdp"
+                    android:text="Narhi 420 so\'m"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toStartOf="@id/number"
+                    app:layout_constraintTop_toBottomOf="@id/number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

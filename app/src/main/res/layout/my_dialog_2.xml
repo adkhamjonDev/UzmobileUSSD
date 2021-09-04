@@ -72,6 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
+                android:paddingBottom="10dp"
                 android:id="@+id/deadline"
                 android:text="Amal qlish muddati 1 kun"
                 android:textColor="@color/black"
@@ -80,6 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
+                android:paddingBottom="10dp"
                 android:id="@+id/faollashtirish"
                 android:text="Faollashtirish: *111*2*19*1*1#"
                 android:textColor="@color/black"
@@ -100,7 +102,6 @@
         </LinearLayout>
     </ScrollView>
     <androidx.cardview.widget.CardView
-        android:layout_marginBottom="20dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         app:cardCornerRadius="25dp"

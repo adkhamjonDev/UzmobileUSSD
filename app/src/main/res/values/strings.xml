@@ -80,6 +80,8 @@ imkoniyat UZTELECOM savdo idorasiga yozma ariza bilan belgilanadi.</string>
     <string name="mob_internet">Mobil internet</string>
     <string name="sms_uzb">O\'zbekiston bo\'yicha</string>
     <string name="activlashtirish">ACTIVLASHTIRISH</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

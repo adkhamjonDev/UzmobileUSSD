@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.google.firebase.database.*
 import uz.adkhamjon.uzmobileussd.R
 import uz.adkhamjon.uzmobileussd.adapters.SmsAdapter
@@ -42,7 +43,6 @@ class SmsPagerFragment : Fragment() {
         firebaseDatabase = FirebaseDatabase.getInstance()
         reference=firebaseDatabase.getReference(SharedPreference.getInstance(requireContext()).lang)
         list= ArrayList()
-
         reference.child("sms/$param1").addChildEventListener(object : ChildEventListener {
             @SuppressLint("NotifyDataSetChanged")
             override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
@@ -50,30 +50,25 @@ class SmsPagerFragment : Fragment() {
                 if (smsModel != null) {
                     list.add(smsModel)
                 }
+                smsAdapter.notifyDataSetChanged()
             }
-
             override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
 
 
             }
-
             override fun onChildRemoved(snapshot: DataSnapshot) {
 
 
             }
-
             override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
 
 
             }
-
             override fun onCancelled(error: DatabaseError) {
 
 
             }
-
         })
-
         smsAdapter= SmsAdapter(requireContext(),list,object:SmsAdapter.OnItemClickListener{
             override fun onItemSms(smsModel: SmsModel) {
                 val builder = AlertDialog.Builder(context)
@@ -86,7 +81,6 @@ class SmsPagerFragment : Fragment() {
                 binding1.faollashtirish.text=smsModel.enable
                 if(smsModel.disable=="null"){
                     binding1.uchirish.visibility=View.GONE
-                    binding1.faollashtirish.setPadding(0,0,0,10)
                 }else{
                     binding1.uchirish.text=smsModel.disable
                 }
