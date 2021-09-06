@@ -13,13 +13,13 @@
     <string name="share">Поделиться</string>
     <string name="rate">Оценка</string>
     <string name="about_us">О нас</string>
-
+    <string name="error_msg_2">Подключитесь к Интернету, чтобы использовать приложение!</string>
     <!-- bottom navigation -->
     <string name="balance">Баланс</string>
     <string name="operator">Оператор</string>
     <string name="news">Новости</string>
     <string name="settings">Настройки</string>
-
+    <string name="ulanish">СОЕДИНЕНИЕ</string>
     <!-- exit -->
     <string name="ask_exit">Чтобы выйти из программы, нажмите еще раз</string>
     <string name="error_msg">У вас отсутствует сим карта Uzmobile</string>
@@ -75,5 +75,16 @@
     <string name="mob_internet">Мобильный интернет</string>
     <string name="sms_uzb">CМС по Узбекистану</string>
     <string name="activlashtirish">АКТИВИРОВАТЬ</string>
-
+    <string-array name="paket">
+        <item>Ежемесячные пакеты</item>
+        <item>Ежедневные пакеты</item>
+        <item>Ночной пакеты</item>
+        <item>Интернет пакеты для \"TAS-IX\"</item>
+        <item>Интернет non-stop</item>
+    </string-array>
+    <string-array name="minute">
+        <item>Пакеты минут</item>
+        <item>Выгодный обмен</item>
+        <item>Для абонентов Constructor</item>
+    </string-array>
 </resources>

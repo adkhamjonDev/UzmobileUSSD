@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackgroundBorderless"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:layout_height="wrap_content">
+    android:layout_height="@dimen/_70sdp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,10 +26,10 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"/>
             <TextView
-                android:id="@+id/name2"
+                android:id="@+id/name"
                 android:text="1000"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_16sdp"
+                android:textSize="@dimen/_12sdp"
                 android:fontFamily="@font/rubik"
                 app:layout_constraintTop_toTopOf="@id/ellipse"
                 app:layout_constraintBottom_toBottomOf="@id/ellipse"
@@ -42,6 +46,7 @@
         android:orientation="horizontal"
         android:layout_weight="1">
         <LinearLayout
+            android:background="@drawable/border_bottom"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -49,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/name2"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
                     android:text="50 MB"
@@ -60,26 +65,39 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:id="@+id/description"
-                    android:textSize="10sp"
-                    android:text="@string/example"
+                    android:maxLines="1"
+                    android:id="@+id/cost"
+                    android:textSize="@dimen/_9sdp"
+                    android:text="Narhi 420 so\'m"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="5dp"
-                    app:layout_constraintStart_toStartOf="@id/name"
-                    app:layout_constraintTop_toBottomOf="@id/name"
+                    app:layout_constraintStart_toStartOf="@id/name2"
+                    app:layout_constraintTop_toBottomOf="@id/name2"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"/>
-                <View
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/view"
-                    android:background="@color/black"
-                    app:layout_constraintTop_toBottomOf="@id/description"
-                    app:layout_constraintStart_toStartOf="parent"
+                <TextView
+                    android:id="@+id/deadline"
+                    android:textSize="@dimen/_9sdp"
+                    android:text="Narhi 420 so\'m"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toStartOf="@id/cost"
+                    app:layout_constraintTop_toBottomOf="@id/cost"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_width="match_parent"
-                    android:layout_height="0.5dp"/>
+                    android:layout_height="0dp"/>
+                <TextView
+                    android:paddingBottom="5dp"
+                    android:id="@+id/active"
+                    android:textSize="@dimen/_9sdp"
+                    android:text="Narhi 420 so\'m"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toStartOf="@id/deadline"
+                    app:layout_constraintTop_toBottomOf="@id/deadline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

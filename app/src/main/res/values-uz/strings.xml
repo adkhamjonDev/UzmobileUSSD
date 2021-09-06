@@ -46,10 +46,10 @@
     <string name="tarif_tekshirish">Тарифни текшириш</string>
     <string name="daqiqa_tekshirish">Дақиқа ни текшириш</string>
 
-
+    <string name="ulanish">УЛАНИШ</string>
     <string name="batafsil">БАТАФСИЛ</string>
     <string name="tarif_change">ТАРИФ УЗГАРТИРИШ</string>
-
+    <string name="error_msg_2">Иловани ишлатиш учун интернет га уланинг!</string>
     <string name="permission">Рухсат рад этилди</string>
 
     <string name="news_tab">Йангиликлар</string>
@@ -73,4 +73,16 @@
     <string name="mob_internet">Мобил интернет </string>
     <string name="sms_uzb">Узбекситон буйича </string>
     <string name="activlashtirish">АКТИВЛАШТИРИШ</string>
+    <string-array name="paket">
+        <item>Ойлик пакетлар</item>
+        <item>Кунлик пакетлар</item>
+        <item>Тунги интернет</item>
+        <item>TAS-IX учун интернет пакет</item>
+        <item>Интернет non-stop</item>
+    </string-array>
+    <string-array name="minute">
+        <item>Дақиқа тупламар</item>
+        <item>Фойдали алмашув</item>
+        <item>Constructor абонетлари учун</item>
+    </string-array>
 </resources>

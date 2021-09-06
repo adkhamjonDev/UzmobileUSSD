@@ -8,7 +8,6 @@
     tools:context=".fragments.ussd.USSDFragment"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
-        android:paddingTop="10dp"
         android:background="@drawable/linear_back"
         android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"

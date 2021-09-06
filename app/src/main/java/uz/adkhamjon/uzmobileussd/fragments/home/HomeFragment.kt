@@ -15,7 +15,6 @@ import com.zhuinden.fragmentviewbindingdelegatekt.viewBinding
 import uz.adkhamjon.uzmobileussd.R
 import uz.adkhamjon.uzmobileussd.adapters.BannerPagerAdapter
 import uz.adkhamjon.uzmobileussd.databinding.FragmentHomeBinding
-import uz.adkhamjon.uzmobileussd.fragments.news.NewsModel
 import uz.adkhamjon.uzmobileussd.utils.SharedPreference
 
 

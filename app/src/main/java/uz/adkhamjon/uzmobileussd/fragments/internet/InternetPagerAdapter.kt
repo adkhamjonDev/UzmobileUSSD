@@ -9,20 +9,6 @@ class InternetPagerAdapter(private val list: ArrayList<String>, fm: FragmentMana
     }
 
     override fun getItem(position: Int): Fragment {
-        return when (position) {
-            0 -> {
-                InternetPagerFragment.newInstance(list[position])
-            }
-            1 -> {
-                InternetPagerFragment.newInstance(list[position])
-            }
-            2 -> {
-                InternetPagerFragment.newInstance(list[position])
-            }
-            3 -> {
-            InternetPagerFragment.newInstance(list[position])
-        }
-            else -> InternetPagerFragment()
-        }
+        return InternetPagerFragment.newInstance(list[position])
     }
 }

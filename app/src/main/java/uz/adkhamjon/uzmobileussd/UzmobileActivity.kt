@@ -6,7 +6,9 @@ import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.pm.PackageManager
+import android.net.ConnectivityManager
 import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
@@ -37,12 +39,13 @@ import io.reactivex.schedulers.Schedulers
 import uz.adkhamjon.uzmobileussd.databinding.ActivityUzmobileBinding
 import uz.adkhamjon.uzmobileussd.databinding.MyDialogBinding
 import uz.adkhamjon.uzmobileussd.utils.Config
+import uz.adkhamjon.uzmobileussd.utils.NetworkChangeListener
 import uz.adkhamjon.uzmobileussd.utils.SharedPreference
 import java.util.*
 
 
 class UzmobileActivity : AppCompatActivity() {
-
+    private lateinit var networkChangeListener: NetworkChangeListener
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityUzmobileBinding
     private lateinit var navController: NavController
@@ -53,6 +56,7 @@ class UzmobileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUzmobileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        networkChangeListener= NetworkChangeListener()
         setLanguage()
         setSupportActionBar(binding.appBarUzmobile.toolbar)
         val drawerLayout: DrawerLayout = binding.drawerLayout
@@ -248,31 +252,14 @@ class UzmobileActivity : AppCompatActivity() {
             }
         }
     }
-    override fun onRestart() {
-        super.onRestart()
-        setLanguage()
+    override fun onStart() {
+        val intentFilter= IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
+        registerReceiver(networkChangeListener,intentFilter)
+        super.onStart()
     }
-
-    @SuppressLint("CheckResult")
-    private fun checkInternet(){
-        ReactiveNetwork.observeInternetConnectivity()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe { isConnectedToInternet: Boolean ->
-                        if (!isConnectedToInternet){
-                            val builder = AlertDialog.Builder(this)
-                            val binding1 = MyDialogBinding.inflate(layoutInflater, null, false)
-                            builder.setView(binding1.root)
-                            binding1.name.text="Internet"
-                            binding1.description.text="Mobil ilovadan foydalanish uchun internet ni yoqing!!!"
-                            builder.setPositiveButton(R.string.call,
-                                DialogInterface.OnClickListener { dialog, id ->
-                                        checkInternet()
-                                })
-                            val alertDialog = builder.create()
-                            alertDialog.show()
-                        }
-                    }
+    override fun onStop() {
+        unregisterReceiver(networkChangeListener)
+        super.onStop()
     }
 }
 

@@ -10,19 +10,10 @@ import uz.adkhamjon.uzmobileussd.UzmobileActivity
 object Config {
     const val BALANCE="*105#"
     const val UZMOBILE="Uzmobile"
-
     fun run(context: Context,str:String){
-        val tManager = context
-            .getSystemService(AppCompatActivity.TELEPHONY_SERVICE) as TelephonyManager
-        val carrierName = tManager.networkOperatorName
-        if(carrierName=="Uzmobile"){
             RunUssd.call(
                 context,
                 str,
             )
-        }else{
-            Toast.makeText(context, R.string.error_msg, Toast.LENGTH_SHORT).show()
-        }
     }
-
 }

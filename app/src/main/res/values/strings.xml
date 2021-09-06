@@ -24,6 +24,7 @@
     <string name="ask_exit">Dasturdan chiqish uchun yana bir marta bosing.</string>
 
     <string name="error_msg">Sizning telefoningizda Uzmobile sim kartasi mavjud emas</string>
+    <string name="error_msg_2">Ilovani ishlatish uchun internet ga ulaning!</string>
 
     <!-- mainCard -->
     <string name="ussd">USSD</string>
@@ -62,6 +63,7 @@ imkoniyat UZTELECOM savdo idorasiga yozma ariza bilan belgilanadi.</string>
     <string name="news_tab">Yangiliklar</string>
     <string name="sale_tab">Aksiyalar</string>
     <string name="back">ORQAGA</string>
+    <string name="ulanish">ULANISH</string>
     <string name="call">Qo\'ng\'iroq qlish</string>
     <string name="biz_blan_aloqa">Biz blan aloqa</string>
     <string name="send_email">XAT JO\'NATISH</string>
@@ -80,8 +82,19 @@ imkoniyat UZTELECOM savdo idorasiga yozma ariza bilan belgilanadi.</string>
     <string name="mob_internet">Mobil internet</string>
     <string name="sms_uzb">O\'zbekiston bo\'yicha</string>
     <string name="activlashtirish">ACTIVLASHTIRISH</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="paket">
+        <item>Oylik paketlar</item>
+        <item>Kunlik paketlar</item>
+        <item>Tungi paketlar</item>
+        <item>TAS-IX uchun internet paketlar</item>
+        <item>Internet non-stop</item>
+    </string-array>
+    <string-array name="minute">
+        <item>Daqiqa to\'plamlar</item>
+        <item>Foydali almashuv</item>
+        <item>Constructor abonentlari uchun</item>
+    </string-array>
 
 
 </resources>

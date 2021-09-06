@@ -1,5 +1,4 @@
 package uz.adkhamjon.uzmobileussd.fragments.ussd
-
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
@@ -14,8 +13,6 @@ import uz.adkhamjon.uzmobileussd.databinding.FragmentUSSDBinding
 import uz.adkhamjon.uzmobileussd.utils.Config
 import uz.adkhamjon.uzmobileussd.utils.RunUssd
 import uz.adkhamjon.uzmobileussd.utils.SharedPreference
-
-
 class USSDFragment : Fragment(R.layout.fragment_u_s_s_d) {
     private val binding by viewBinding(FragmentUSSDBinding::bind)
     private lateinit var ussdAdapter: UssdAdapter
@@ -28,8 +25,6 @@ class USSDFragment : Fragment(R.layout.fragment_u_s_s_d) {
         firebaseDatabase = FirebaseDatabase.getInstance()
         reference=firebaseDatabase.getReference(SharedPreference.getInstance(requireContext()).lang)
         list= ArrayList()
-
-
         reference.child("ussd").addChildEventListener(object :ChildEventListener{
             @SuppressLint("NotifyDataSetChanged")
             override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
@@ -61,7 +56,6 @@ class USSDFragment : Fragment(R.layout.fragment_u_s_s_d) {
             }
 
         })
-
         ussdAdapter=UssdAdapter(list, object :UssdAdapter.OnItemClickListener{
             override fun onItemRun(str: String) {
                 Config.run(requireContext(),str)

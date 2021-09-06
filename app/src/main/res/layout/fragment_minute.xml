@@ -46,9 +46,8 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-    <LinearLayout
-        android:paddingTop="10dp"
-        android:background="@drawable/linear_back"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_marginTop="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,13 +55,6 @@
         app:layout_constraintTop_toBottomOf="@id/check_tarif"
         android:layout_width="0dp"
         android:layout_height="0dp">
-        <androidx.recyclerview.widget.RecyclerView
-            tools:listitem="@layout/internet_item"
-            android:orientation="vertical"
-            android:id="@+id/rec_View"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </LinearLayout>
+    </androidx.viewpager.widget.ViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

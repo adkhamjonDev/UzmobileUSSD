@@ -4,9 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import uz.adkhamjon.uzmobileussd.databinding.XizmatItemBinding
+import uz.adkhamjon.uzmobileussd.fragments.xizmat.XizmatModel
 
 
-class XizmatAdapter(var list: List<String>):
+class XizmatAdapter(var list: List<XizmatModel>,var onItemClickListener: OnItemClickListener):
     RecyclerView.Adapter<XizmatAdapter.MyViewHolder>(){
     inner class MyViewHolder(var xizmatItemBinding: XizmatItemBinding): RecyclerView.ViewHolder(
         xizmatItemBinding.root){
@@ -22,14 +23,18 @@ class XizmatAdapter(var list: List<String>):
         )
     }
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.xizmatItemBinding.name.text=list[position]
+        val xizmatModel = list[position]
+        holder.xizmatItemBinding.name.text=xizmatModel.name
+        holder.xizmatItemBinding.description.text=xizmatModel.description
 
-
+        holder.itemView.setOnClickListener {
+            onItemClickListener.onItemXizmat(xizmatModel)
+        }
     }
     override fun getItemCount(): Int {
         return list.size
     }
     interface OnItemClickListener {
-        fun onItemTarif(position:Int)
+        fun onItemXizmat(xizmatModel: XizmatModel)
     }
 }

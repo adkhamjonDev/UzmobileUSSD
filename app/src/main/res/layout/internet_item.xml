@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackgroundBorderless"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
@@ -24,6 +28,7 @@
             <TextView
                 android:id="@+id/name2"
                 android:text="1000"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sdp"
                 android:fontFamily="@font/rubik"
@@ -61,6 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:maxLines="1"
                     android:id="@+id/cost"
                     android:textSize="@dimen/_9sdp"
                     android:text="Narhi 420 so\'m"

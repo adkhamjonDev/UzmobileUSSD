@@ -18,19 +18,23 @@ class SettingsActivity : AppCompatActivity() {
         }
         binding.uzbek.setOnClickListener {
             SharedPreference.getInstance(this).lang = "uzbek"
-            startActivity(Intent(this@SettingsActivity, UzmobileActivity::class.java))
-            finish()
+            restart()
+
         }
         binding.russian.setOnClickListener {
             SharedPreference.getInstance(this).lang = "russian"
-            startActivity(Intent(this@SettingsActivity, UzmobileActivity::class.java))
-            finish()
+            restart()
 
         }
         binding.latin.setOnClickListener {
             SharedPreference.getInstance(this).lang = "latin"
-            startActivity(Intent(this@SettingsActivity, UzmobileActivity::class.java))
-            finish()
+            restart()
+
         }
+    }
+    private fun restart(){
+        val intent = Intent(this, UzmobileActivity::class.java)
+        startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK))
+        finish()
     }
 }

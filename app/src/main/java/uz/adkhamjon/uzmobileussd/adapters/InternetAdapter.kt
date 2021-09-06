@@ -23,8 +23,8 @@ class InternetAdapter( var list: List<InternetModel>,var onItemClickListener: On
     }
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val internetModel = list[position]
-        holder.internetItemBinding.name.text="${internetModel.name}\nMB"
-        holder.internetItemBinding.name2.text=internetModel.name2
+        holder.internetItemBinding.name2.text="${internetModel.name}\nMB"
+        holder.internetItemBinding.name.text=internetModel.name2
         holder.internetItemBinding.cost.text=internetModel.cost
         holder.internetItemBinding.number.text=internetModel.number
         holder.internetItemBinding.deadline.text=internetModel.deadline
