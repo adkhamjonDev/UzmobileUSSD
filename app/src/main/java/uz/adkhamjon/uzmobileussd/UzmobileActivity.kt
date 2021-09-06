@@ -57,7 +57,6 @@ class UzmobileActivity : AppCompatActivity() {
         binding = ActivityUzmobileBinding.inflate(layoutInflater)
         setContentView(binding.root)
         networkChangeListener= NetworkChangeListener()
-        setLanguage()
         setSupportActionBar(binding.appBarUzmobile.toolbar)
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -208,23 +207,6 @@ class UzmobileActivity : AppCompatActivity() {
             }
         }
          return super.onOptionsItemSelected(item)
-    }
-    private fun setLanguage() {
-        val lang = SharedPreference.getInstance(this).lang
-        if(lang=="uzbek"){
-            l="en"
-        }
-        else if(lang=="russian"){
-            l="ru"
-        }
-        else{
-            l="uz"
-        }
-        val locale = Locale(l)
-        Locale.setDefault(locale)
-        val config = resources.configuration
-        config.locale = locale
-        resources.updateConfiguration(config, resources.displayMetrics)
     }
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_uzmobile)
